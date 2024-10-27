@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    width: 100%;
+    height: 100%;
+    background: url(images/universe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.planetview{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.planetinformation{
+    width: 50%;
+    padding: 25px 0;
+    height: fit-content;
+    background-color: rgba(0,0,0,0.1);
+    flex-basis: 50%;
+}
+
+.planet{
+    position: sticky;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    padding: 0 16px;
+    z-index: 10;
+}
+
+.title{
+    color: white;
+    font-family: serif;
+    font-size: 110px;
+    font-weight: 600;
+}
+
+.text{
+    color: white;
+    font-family: serif;
+    font-size: 18px;
+    margin-top: 10px;
+    letter-spacing: 0.03em;
+}
+
+.planetpic{
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    flex-basis: 50%;
+}
+
+.item{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 50%;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    transform: scale(0.9);
+}
+
+.item.active{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+img{
+    width: 170px;
+    aspect-ratio: 1;
+}
+
+button{
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-color: transparent;
+    margin: 20px 0;
+    font-weight: 400;
+    font-family: serif;
+    font-style:italic;
+    color: white;
+    backdrop-filter: blur(6px) saturate(200%);
+} 
+
+.headingIntro{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.heading{
+    color: white;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.015em;
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.3);
+}
+
+.backdrop{
+    backdrop-filter: blur(6px) saturate(200%);
+}
+
+
+.arrow{
+    height: 20px;
+    width: 60px;
+    clip-path: polygon(0px 0%, 60px 0%, 30px 100%);
+    background-color: white;
+    margin-top: 12px;
+    opacity: 0;
+}
+
+.blur1{
+    animation: blur1-animation 2s ease-in-out infinite;
+}
+.blur2{
+    animation: blur2-animation 2s ease-in-out infinite;
+}
+.blur3{
+    animation: blur3-animation 2s ease-in-out infinite;
+}
+.blur4{
+    animation: blur4-animation 2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 1000px) {
+    .planetview{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .planetinformation{
+        width: 50%;
+        padding: 25px 0;
+        height: fit-content;
+        background-color: rgba(0,0,0,0.1);
+        flex-basis: 50%;
+    }
+    
+    .planet{
+        position: sticky;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0 16px;
+        z-index: 10;
+    }
+    
+    .title{
+        color: white;
+        font-family: serif;
+        font-size: 110px;
+        font-weight: 600;
+    }
+    
+    .text{
+        color: white;
+        font-family: serif;
+        font-size: 18px;
+        margin-top: 10px;
+        letter-spacing: 0.03em;
+    }
+    
+    .planetpic{
+        position: sticky;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        flex-basis: 50%;
+    }
+    
+    .item{
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-basis: 50%;
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+        transform: scale(0.9);
+    }
+    
+    .item.active{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    
+    img{
+        width: 350px;
+        aspect-ratio: 1;
+    }
+    
+    button{
+        height: 40px;
+        width: 120px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        border-color: transparent;
+        margin: 20px 0;
+        font-weight: 400;
+        font-family: serif;
+        font-style:italic;
+        color: white;
+        backdrop-filter: blur(6px) saturate(200%);
+    } 
+    
+    .headingIntro{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .heading{
+        color: white;
+        text-align: center;
+        font-size: 90px;
+        font-family: 'Courier New', Courier, monospace;
+        letter-spacing: 0.015em;
+        text-shadow: 3px 3px rgba(255, 255, 255, 0.3);
+    }
+    .arrow{
+        height: 20px;
+        width: 60px;
+        clip-path: polygon(0px 0%, 60px 0%, 30px 100%);
+        background-color: white;
+        margin-top: 12px;
+        opacity: 0;
+    }
+  }
+
+
+@keyframes blur1-animation{
+    0%{
+        opacity: 1;
+    }
+    30%,70%,100%{
+        opacity: 0;
+    }
+}
+
+@keyframes blur2-animation{
+    0%,70%,100%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+}
+
+@keyframes blur3-animation{
+    0%,30%,100%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+}
+
+@keyframes blur4-animation{
+    0%,30%,70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
